@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: contur-focus-client
+
+kontur:
+  url: https://focus-api.kontur.ru/
+  key: 12345
+  methods:
+    m1: req
