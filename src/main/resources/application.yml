@@ -4,9 +4,27 @@ server:
 spring:
   application:
     name: contur-focus-client
+  datasource:
+    url: jdbc:postgresql://127.0.0.1/batch
+    username: postgres
+    password: Zxcvb`123
+
+  batch:
+      jdbc:
+        initializer-enabled: true
+        initialize-schema: "always"
+      job:
+        enabled: true
 
 kontur:
   url: https://focus-api.kontur.ru/
-  key: 12345
+  key: 3208d29d15c507395db770d0e65f3711e40374df
   methods:
-    m1: req
+    req: req                                           # (Базовые реквизиты)
+    petitionersOfArbitration: petitionersOfArbitration # (Статистика по истцам в арбитраже)
+    excerpt: excerpt                                   # (Выписка из ЕГРЮЛ/ЕГРИП)
+    finan: finan                                       # (Финансовый анализ)
+    govPurchasesOfCustomer: govPurchasesOfCustomer     # (Госзакупки заказчика)
+
+
+

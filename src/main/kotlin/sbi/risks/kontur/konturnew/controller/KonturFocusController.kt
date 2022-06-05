@@ -9,14 +9,13 @@ import sbi.risks.kontur.konturnew.service.KonturFocusWebService
 
 @RestController
 @RequestMapping("update")
-class KonturFocusController {
-
+class KonturFocusController(
+    private var konturFocusWebService: KonturFocusWebService
+) {
     @GetMapping
     fun update() : ResponseEntity<Any> {
-
-        val kontur =  KonturFocusWebService()
-        val result  = kontur.getInn("7708503727")
-        println(result.block())
+        val result  = konturFocusWebService.getReq("7708503727")
+        //println(result.block())
         return ResponseEntity.ok("ok")
     }
 }

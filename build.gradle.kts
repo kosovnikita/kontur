@@ -32,9 +32,12 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
  //  implementation("org.liquibase:liquibase-core")
     implementation("org.springframework:spring-jdbc")
+    implementation("org.springframework.boot:spring-boot-starter-batch:2.6.7")
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation("org.postgresql:postgresql:42.1.4")
     compileOnly("org.projectlombok:lombok")
   //  runtimeOnly("io.r2dbc:r2dbc-postgresql")
- //   runtimeOnly("org.postgresql:postgresql")
+    runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
