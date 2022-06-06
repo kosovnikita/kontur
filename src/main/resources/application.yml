@@ -16,6 +16,12 @@ spring:
       job:
         enabled: true
 
+#  datasource:
+#    url: jdbc:oracle:thin:@prd-oracle-dwh-act.corp.sbibankllc.ru:1521/xe
+#    username: EXTDATAAPP
+#    password: hsC7dBIE:tskrFcQ
+#    driver-class-name: oracle.jdbc.OracleDriver
+
 kontur:
   url: https://focus-api.kontur.ru/
   key: 3208d29d15c507395db770d0e65f3711e40374df
